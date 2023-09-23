@@ -5,7 +5,7 @@ import 'notiflix/dist/notiflix-3.2.6.min.css';
 import axios from 'axios';
 
 axios.defaults.headers.common['x-api-key'] =
-  'live_JHlIcmDRm2ysK1zYttrZpI9MO4JgUpTcXrKUMA2kEsMNlBCuvbQEUQkgRqlir4gX';
+  'live_3lTUbnsiQLqLHwor1OkURf0BxrWKldmY8O4eLcJhAwpw3fGyOnoPU2CwsNDvABgI';
 
 function fetchBreeds() {
   console.log('fetchBreeds called');
@@ -28,7 +28,7 @@ function fetchCatByBreed(breedId) {
   console.log('displayCatInfo', breedId);
   console.log(`Fetching cat for breed: ${breedId}`);
   return axios
-    .get('https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}')
+    .get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`)
     .then(response => response.data[0])
     .catch(error => {
       console.log('fetchCatByBreed error', error.response);
@@ -38,4 +38,5 @@ function fetchCatByBreed(breedId) {
       throw error;
     });
 }
+
 export { fetchBreeds, fetchCatByBreed };
