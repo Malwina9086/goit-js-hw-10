@@ -5,7 +5,7 @@ import 'notiflix/dist/notiflix-3.2.6.min.css';
 import axios from 'axios';
 
 axios.defaults.headers.common['x-api-key'] =
-  'live_3lTUbnsiQLqLHwor1OkURf0BxrWKldmY8O4eLcJhAwpw3fGyOnoPU2CwsNDvABgI';
+  'live_JHlIcmDRm2ysK1zYttrZpI9MO4JgUpTcXrKUMA2kEsMNlBCuvbQEUQkgRqlir4gX';
 
 function fetchBreeds() {
   console.log('fetchBreeds called');
