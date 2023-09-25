@@ -36,7 +36,7 @@ window.onload = () => {
       breedSelect.addEventListener('change', event => {
         console.log('onChange event', event);
         console.log('onChange event - selected value', event.target.value);
-        catDivProject(event.target.value);
+        displayCatInfo(event.target.value);
       });
       console.log('SlimSelect initialized: ', select);
       console.log('SlimSelect data: ', select.data.getData());
@@ -51,7 +51,7 @@ window.onload = () => {
     });
 };
 
-function catDivProject(breedId) {
+function displayCatInfo(breedId) {
   console.log('About to fetch cat by breed');
 
   Notiflix.Loading.standard('Loading data, please wait...', {
