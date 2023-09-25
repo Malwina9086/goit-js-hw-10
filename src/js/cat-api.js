@@ -1,5 +1,7 @@
 'use strict';
+
 console.log('Starting script');
+
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
 import axios from 'axios';

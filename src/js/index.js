@@ -8,12 +8,12 @@ import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
-const catInfo = document.querySelector('.cat-info');
+const divCat = document.querySelector('.cat-info');
 let select;
 
 Notiflix.Notify.Init({ position: 'right-top', timeout: 3000 });
 
-catInfo.style.display = 'none';
+divCat.style.display = 'none';
 
 window.onload = () => {
   console.log('Window loaded');
@@ -36,7 +36,7 @@ window.onload = () => {
       breedSelect.addEventListener('change', event => {
         console.log('onChange event', event);
         console.log('onChange event - selected value', event.target.value);
-        displayCatInfo(event.target.value);
+        catDivProject(event.target.value);
       });
       console.log('SlimSelect initialized: ', select);
       console.log('SlimSelect data: ', select.data.getData());
@@ -51,7 +51,7 @@ window.onload = () => {
     });
 };
 
-function displayCatInfo(breedId) {
+function catDivProject(breedId) {
   console.log('About to fetch cat by breed');
 
   Notiflix.Loading.standard('Loading data, please wait...', {
@@ -63,7 +63,7 @@ function displayCatInfo(breedId) {
       console.log('Fetched cat info', cat);
       Notiflix.Loading.remove();
       console.log(cat);
-      catInfo.innerHTML = `
+      divCat.innerHTML = `
                 <img src="${cat.url}" alt="${cat.breeds[0].name}">
                 <div class="description">
                     <h2>${cat.breeds[0].name}</h2>
@@ -71,9 +71,9 @@ function displayCatInfo(breedId) {
                     <p>${cat.breeds[0].temperament}</p>
                 </div>
             `;
-      console.log(catInfo);
+      console.log(divCat);
 
-      catInfo.style.display = 'block';
+      divCat.style.display = 'block';
     })
     .catch(error => {
       Notiflix.Loading.remove();
