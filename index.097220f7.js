@@ -502,6 +502,6 @@ let{Axios:eE,AxiosError:eA,CanceledError:eL,isCancel:eO,CancelToken:eT,VERSION:e
         <p>${t.breeds[0].temperament}</p>
     </div>
 </div>
-            `,console.log(eX),eX.style.display="block"}).catch(t=>{/*@__PURE__*/i(p).Loading.remove(),console.error(t),/*@__PURE__*/i(p).Notify.Failure("Oops! Something went wrong! Try reloading the page!")})}),console.log("SlimSelect initialized: ",t),console.log("SlimSelect data: ",t.data.getData())}).catch(t=>{/*@__PURE__*/i(p).Loading.remove(),console.error(t),/*@__PURE__*/i(p).Notify.Failure("Oops! Something went wrong! Try reloading the page!")})}}();//# sourceMappingURL=index.761a0fc9.js.map
+            `,console.log(eX),eX.style.display="block"}).catch(t=>{/*@__PURE__*/i(p).Loading.remove(),console.error(t),/*@__PURE__*/i(p).Notify.failure("Oops! Something went wrong! Try reloading the page!")})}),console.log("SlimSelect initialized: ",t),console.log("SlimSelect data: ",t.data.getData())}).catch(t=>{/*@__PURE__*/i(p).Loading.remove(),/*@__PURE__*/i(p).Notify.failure("Oops! Something went wrong! Try reloading the page!")})}}();//# sourceMappingURL=index.097220f7.js.map
 
-//# sourceMappingURL=index.761a0fc9.js.map
+//# sourceMappingURL=index.097220f7.js.map
