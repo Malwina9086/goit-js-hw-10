@@ -11,7 +11,7 @@ import { fetchBreeds, fetchCatByBreed } from './cat-api';
 const divCat = document.querySelector('.cat-info');
 let select;
 
-Notiflix.Notify.Init({ position: 'right-top', timeout: 3000 });
+Notiflix.Notify.init({ position: 'right-top', timeout: 3000 });
 
 divCat.style.display = 'none';
 
@@ -64,12 +64,14 @@ function displayCatInfo(breedId) {
       Notiflix.Loading.remove();
       console.log(cat);
       divCat.innerHTML = `
-                <img src="${cat.url}" alt="${cat.breeds[0].name}">
-                <div class="description">
-                    <h2>${cat.breeds[0].name}</h2>
-                    <p>${cat.breeds[0].description}</p>
-                    <p>${cat.breeds[0].temperament}</p>
-                </div>
+                <div class="cat-info">
+    <img src="${cat.url}" alt="${cat.breeds[0].name}" class="cat-image">
+    <div class="description">
+        <h2>${cat.breeds[0].name}</h2>
+        <p>${cat.breeds[0].description}</p>
+        <p>${cat.breeds[0].temperament}</p>
+    </div>
+</div>
             `;
       console.log(divCat);
 
