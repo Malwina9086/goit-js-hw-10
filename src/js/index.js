@@ -43,9 +43,8 @@ window.onload = () => {
     })
     .catch(error => {
       Notiflix.Loading.remove();
-      console.error(error);
 
-      Notiflix.Notify.Failure(
+      Notiflix.Notify.failure(
         'Oops! Something went wrong! Try reloading the page!'
       );
     });
@@ -81,7 +80,7 @@ function displayCatInfo(breedId) {
       Notiflix.Loading.remove();
       console.error(error);
 
-      Notiflix.Notify.Failure(
+      Notiflix.Notify.failure(
         'Oops! Something went wrong! Try reloading the page!'
       );
     });
